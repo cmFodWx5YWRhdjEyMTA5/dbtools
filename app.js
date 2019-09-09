@@ -2,12 +2,11 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
+const dotenv = require("dotenv").config();
 const session = require("express-session");
 const path = require("path");
 const flash = require("express-flash-messages");
 
-dotenv.config();
 const config = require("./web/configs/database.js");
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -27,7 +26,8 @@ app.use(
 //Database Connections Starts
 mongoose.connect(config.database, {
   useCreateIndex: true,
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 let db = mongoose.connection;
 db.once("open", () => console.log("Connected to MongoDB"));

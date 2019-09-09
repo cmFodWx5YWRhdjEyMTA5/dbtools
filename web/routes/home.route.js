@@ -48,12 +48,19 @@ router.get("/forgot-password", async (req, res) => {
   });
 });
 
+const { projectFileUpload } = require("../middlewares/project-files-upload");
+
 router.get("/projects", projectsList);
 router.get("/edit-project", editProjectPage);
 router.get("/add-project", addProjectPage);
 
 router.post("/register", validate("signup"), registerUser);
 router.post("/login", validate("login"), login);
-router.post("/projects", validate("project"), saveProject);
+router.post(
+  "/projects",
+  projectFileUpload.single("p_file"),
+  validate("project"),
+  saveProject
+);
 
 module.exports = router;

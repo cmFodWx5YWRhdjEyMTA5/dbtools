@@ -54,46 +54,45 @@
 
 					<div id="project-list-container" class="row">
 						<%if(count > 0){%>
-						<div class="col-lg-3 col-sm-4">
-							<div class="card-box project-box">
-								<div class="dropdown profile-action">
-									<a href="javascript:void(0)" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-									<ul class="dropdown-menu pull-right">
-										<li><a href="javascript:void(0)" data-toggle="modal" data-target="#edit_project"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
-										<li><a href="javascript:void(0)" data-toggle="modal" data-target="#delete_project"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
-									</ul>
+							<%projects.projects.forEach(project=>{%>
+								<div class="col-lg-3 col-sm-4">
+									<div class="card-box project-box">
+										<div class="dropdown profile-action">
+											<a href="javascript:void(0)" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+											<ul class="dropdown-menu pull-right">
+												<li><a href="javascript:void(0)" data-toggle="modal" data-target="#edit_project"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+												<li><a href="javascript:void(0)" data-toggle="modal" data-target="#delete_project"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+											</ul>
+										</div>
+										<h4 class="project-title"><a href="#"><%=project.name;%></a></h4>
+										<small class="block text-ellipsis m-b-15">
+											<span class="text-xs">1</span> <span class="text-muted">open tasks, </span>
+											<span class="text-xs">9</span> <span class="text-muted">tasks completed</span>
+										</small>
+										<p class="text-muted"><%=project.desc;%></p>
+										<div class="pro-deadline m-b-15">
+											<div class="sub-title">Deadline:</div>
+											<div class="text-muted"><%=project.end_date;%></div>
+										</div>
+										<div class="project-members m-b-15">
+											<div>Project Leader :</div>
+											<ul class="team-members"><li><a href="javascript:void(0)" data-toggle="tooltip" title="Jeffery Lalor"><img src="assets/img/user.jpg" alt="Jeffery Lalor"></a></li></ul>
+										</div>
+										<div class="project-members m-b-15">
+											<div>Team :</div>
+											<ul class="team-members">
+												<li><a href="javascript:void(0)" data-toggle="tooltip" title="John Doe"><img src="assets/img/user.jpg" alt="John Doe"></a></li>
+												<li><a href="javascript:void(0)" data-toggle="tooltip" title="Richard Miles"><img src="assets/img/user.jpg" alt="Richard Miles"></a></li>
+												<li><a href="javascript:void(0)" data-toggle="tooltip" title="John Smith"><img src="assets/img/user.jpg" alt="John Smith"></a></li>
+												<li><a href="javascript:void(0)" data-toggle="tooltip" title="Mike Litorus"><img src="assets/img/user.jpg" alt="Mike Litorus"></a></li>
+												<li><a href="javascript:void(0)" class="all-users">+15</a></li>
+											</ul>
+										</div>
+										<p class="m-b-5">Progress <span class="text-success pull-right">40%</span></p>
+										<div class="progress progress-xs m-b-0"><div class="progress-bar progress-bar-success" role="progressbar" data-toggle="tooltip" title="40%" style="width: 40%"></div></div>
+									</div>
 								</div>
-								<h4 class="project-title"><a href="project-view.html">Food and Drinks</a></h4>
-								<small class="block text-ellipsis m-b-15">
-									<span class="text-xs">1</span> <span class="text-muted">open tasks, </span>
-									<span class="text-xs">9</span> <span class="text-muted">tasks completed</span>
-								</small>
-								<p class="text-muted">Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry. When an unknown printer took a galley of type and
-									scrambled it...
-								</p>
-								<div class="pro-deadline m-b-15">
-									<div class="sub-title">Deadline:</div>
-									<div class="text-muted">8 Sep 2017</div>
-								</div>
-								<div class="project-members m-b-15">
-									<div>Project Leader :</div>
-									<ul class="team-members"><li><a href="javascript:void(0)" data-toggle="tooltip" title="Jeffery Lalor"><img src="assets/img/user.jpg" alt="Jeffery Lalor"></a></li></ul>
-								</div>
-								<div class="project-members m-b-15">
-									<div>Team :</div>
-									<ul class="team-members">
-										<li><a href="javascript:void(0)" data-toggle="tooltip" title="John Doe"><img src="assets/img/user.jpg" alt="John Doe"></a></li>
-										<li><a href="javascript:void(0)" data-toggle="tooltip" title="Richard Miles"><img src="assets/img/user.jpg" alt="Richard Miles"></a></li>
-										<li><a href="javascript:void(0)" data-toggle="tooltip" title="John Smith"><img src="assets/img/user.jpg" alt="John Smith"></a></li>
-										<li><a href="javascript:void(0)" data-toggle="tooltip" title="Mike Litorus"><img src="assets/img/user.jpg" alt="Mike Litorus"></a></li>
-										<li><a href="javascript:void(0)" class="all-users">+15</a></li>
-									</ul>
-								</div>
-								<p class="m-b-5">Progress <span class="text-success pull-right">40%</span></p>
-								<div class="progress progress-xs m-b-0"><div class="progress-bar progress-bar-success" role="progressbar" data-toggle="tooltip" title="40%" style="width: 40%"></div></div>
-							</div>
-						</div>
+							<%})%>						
 						<%}else{%>
 							<div class="col-lg-12 col-sm-12" align="center"><div class="card-box project-box"><h4 class="project-title" style="margin-bottom:0px;"><a href="javascript:void(0)">NO PROJECTS AVAILABLE</a></h4></div></div>
 						<%}%>
