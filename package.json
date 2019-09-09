@@ -1,0 +1,31 @@
+{
+  "name": "dbtools",
+  "version": "1.0.0",
+  "description": "Project management nodejs web application",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon dbtools-server.js",
+    "start": "node dbtools-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://vicky_sharma@bitbucket.org/vicky_sharma/dbtools.git"
+  },
+  "author": "Vicky",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/vicky_sharma/dbtools#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-flash-messages": "^0.1.1",
+    "express-session": "^1.16.2",
+    "express-validator": "^6.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.11",
+    "multer": "^1.4.2"
+  }
+}
