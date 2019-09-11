@@ -1,4 +1,4 @@
-<%var count = projects.count;%>
+<%var count = projects.length;%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -54,7 +54,7 @@
 
 					<div id="project-list-container" class="row">
 						<%if(count > 0){%>
-							<%projects.projects.forEach(project=>{%>
+							<%projects.forEach(project=>{%>
 								<div class="col-lg-3 col-sm-4">
 									<div class="card-box project-box">
 										<div class="dropdown profile-action">
@@ -69,7 +69,7 @@
 											<span class="text-xs">1</span> <span class="text-muted">open tasks, </span>
 											<span class="text-xs">9</span> <span class="text-muted">tasks completed</span>
 										</small>
-										<p class="text-muted"><%=project.desc;%></p>
+										<p class="text-muted"><%- project.desc %></p>
 										<div class="pro-deadline m-b-15">
 											<div class="sub-title">Deadline:</div>
 											<div class="text-muted"><%=project.end_date;%></div>

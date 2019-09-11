@@ -49,15 +49,16 @@ exports.saveProject = async (req, res, next) => {
   }
 };
 
-exports.projectsList = async (req, res, next) => {
+exports.projectsListPage = async (req, res, next) => {
   var sess = req.session;
   if (sess.hasOwnProperty("islogin") && sess.islogin == true) {
     if (sess.user.usertype === "admin") {
+      const { projects } = await getProjectList();
       res.render("admin/projects", {
         title: "admin",
         error: "",
         message: "",
-        projects: await getProjectList(),
+        projects: projects,
         user: sess.user
       });
     } else {

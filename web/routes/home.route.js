@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { validate } = require("../middlewares/validator");
 const {
-  projectsList,
+  projectsListPage,
   editProjectPage,
   saveProject,
   addProjectPage
@@ -50,7 +50,7 @@ router.get("/forgot-password", async (req, res) => {
 
 const { projectFileUpload } = require("../middlewares/project-files-upload");
 
-router.get("/projects", projectsList);
+router.get("/projects", projectsListPage);
 router.get("/edit-project", editProjectPage);
 router.get("/add-project", addProjectPage);
 
@@ -62,5 +62,17 @@ router.post(
   validate("project"),
   saveProject
 );
+
+const { getProjectList } = require("../helpers/utility");
+router.get("/test", async (req, res) => {
+  const { projects } = await getProjectList();
+  console.log(projects);
+  res.json({
+    title: "admin",
+    error: "",
+    message: "",
+    projects: projects
+  });
+});
 
 module.exports = router;

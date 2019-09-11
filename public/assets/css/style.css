@@ -1,68 +1,8 @@
-
-
-/*
-Author       : Dreamguys
-Template Name: SmartHR - Bootstrap Admin Template
-Version      : 1.3
-*/
-
-/*============================
- [Table of CSS]
-
-1. General
-2. Table
-3. Helper Class
-4. Bootstrap Classes
-5. Animation
-6. Header
-7. Sidebar
-8. Content
-9. Login
-10. Dashboard
-11. Activity
-12. Select2
-13. Nav tabs
-14. Holidays
-15. Edit Profile
-16. Chat
-17. Focus Label
-18. Leave
-19. Employee
-20. Events
-21. Profile
-22. Notifications
-23. Roles & Permissions
-24. Chat Right Sidebar
-25. Projects
-26. Invoice
-27. Task
-28. Project View
-29. Payslip
-30. Attendance
-31. Ticket
-32. Client Profile
-33. Inbox
-34. Mail View
-35. Voice call
-36. Video Call
-37. Incoming call
-38. Contacts
-39. Chat Sidebar
-40. Jobs
-41. Job Details
-42. Responsive
-
-========================================*/
-
-/*-----------------
-	1. General
------------------------*/
-
 html {
 	height: 100%;
 }
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Muli', sans-serif;
 	font-size: 13px;
 	color: #333;
 	background-color: #eff3f6;
@@ -2364,12 +2304,12 @@ table.dataTable {
 .fc-toolbar h2 {
 	font-size: 18px;
 	font-weight: 600;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Muli', sans-serif;
 	line-height: 30px;
 	text-transform: uppercase;
 }
 .fc-day-grid-event .fc-time {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Muli', sans-serif;
 }
 .fc-day {
 	background: #fff;
@@ -2492,12 +2432,12 @@ table.dataTable {
 .fc-basic-view td.fc-week-number span {
 	padding-right: 8px;
 	font-weight: 700;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Muli', sans-serif;
 }
 .fc-basic-view td.fc-day-number {
 	padding-right: 8px;
 	font-weight: 700;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Muli', sans-serif;
 }
 .event-form .input-group .form-control {
 	height: 40px;
